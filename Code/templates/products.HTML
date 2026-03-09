@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<table border="3" cellpadding="8" cellspacing="0" class="table table-striped">
+    <tr style="background-color: #858585;">
+        <th>Name</th>
+        <th>Price</th>
+        <th>In Stock</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        <td>{{ product.in_stock }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}  
+   
